@@ -1,0 +1,24 @@
+//* abstracts files
+@import "./abstracts/variables";
+
+//* base files
+@import "./base/reset";
+@import "./base/typography";
+
+//* components files
+@import "./components/buttons";
+
+//* layout files
+@import "./layout/header";
+@import "./layout/footer";
+
+//* pages files
+@import "./pages/home";
+@import "./pages/faq";
+@import "./pages/presents";
+
+//* utils files
+@import "./utils/mixins";
+@import "./utils/helpers";
+@import "./utils/mediaqueries";
+@import "./utils/utilities";
