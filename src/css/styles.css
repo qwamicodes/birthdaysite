@@ -1,8 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
-
 .u-flex-center {
   display: flex; }
 
@@ -111,3 +106,91 @@
 
 .u-position-sticky {
   position: sticky !important; }
+
+@keyframes hue {
+  0% {
+    filter: hue-rotate(0deg); }
+  50% {
+    filter: hue-rotate(360deg); }
+  100% {
+    filter: hue-rotate(-360deg); } }
+
+@font-face {
+  font-family: "Telma-Light";
+  src: url("../fonts/telma/Telma-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Telma-Regular";
+  src: url("../fonts/telma/Telma-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Telma-Bold";
+  src: url("../fonts/telma/Telma-Bold.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: "PTSans-Regular";
+  src: url("../fonts/pt-sans/PTSans-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: "PTSans-Bold";
+  src: url("../fonts/pt-sans/PTSans-Bold.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Quicksand-Light";
+  src: url("../fonts/quicksand/Quicksand-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: "Quicksand-Regular";
+  src: url("../fonts/quicksand/Quicksand-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  box-sizing: inherit; }
+  @media only screen and (max-width: 20em) {
+    html {
+      font-size: 35%; } }
+
+body {
+  font: 300 1.8rem "Quicksand-Light";
+  background: linear-gradient(to bottom right, #000d6b, #ff5da2) no-repeat;
+  background-size: cover;
+  max-height: 100vh;
+  height: 100vh;
+  color: #f2f2f2;
+  animation: hue 10s linear infinite; }
+
+a {
+  text-decoration: none; }
+
+ul,
+li {
+  list-style: none; }
+
+a:active, a:focus,
+button:active,
+button:focus,
+input:active,
+input:focus {
+  outline: 0; }
+
+button {
+  border: 0; }
