@@ -1,0 +1,57 @@
+//? Telma Font Types
+
+@font-face {
+  font-family: "Telma-Light";
+  src: url("../fonts/telma/Telma-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Telma-Regular";
+  src: url("../fonts/telma/Telma-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Telma-Bold";
+  src: url("../fonts/telma/Telma-Bold.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+//? PT-Sans Font Types
+
+@font-face {
+  font-family: "PTSans-Regular";
+  src: url("../fonts/pt-sans/PTSans-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PTSans-Bold";
+  src: url("../fonts/pt-sans/PTSans-Bold.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+//? Quicksand Font Types
+
+@font-face {
+  font-family: "Quicksand-Light";
+  src: url("../fonts/quicksand/Quicksand-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Quicksand-Regular";
+  src: url("../fonts/quicksand/Quicksand-Regular.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+// ? Headings
+$primary-heading: 300 $fontsize-medium $quicksand-light;
