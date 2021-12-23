@@ -3,3 +3,45 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  font-size: 62.5%;
+  box-sizing: inherit;
+
+  @include respond(mobile-small) {
+    font-size: 35%;
+  }
+}
+
+body {
+  font: $primary-heading;
+  background: linear-gradient(to bottom right, $primary-color, $alternate-color)
+    no-repeat;
+  background-size: cover;
+  max-height: 100vh;
+  height: 100vh;
+  color: $color-white-dark;
+  animation: hue 10s linear infinite;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a,
+button,
+input {
+  &:active,
+  &:focus {
+    outline: 0;
+  }
+}
+
+button {
+  border: 0;
+}
