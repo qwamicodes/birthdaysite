@@ -1,9 +1,16 @@
+//* utils files
+@import "./utils/mixins";
+@import "./utils/helpers";
+@import "./utils/mediaqueries";
+@import "./utils/utilities";
+
 //* abstracts files
 @import "./abstracts/variables";
+@import "./abstracts/animation";
 
 //* base files
-@import "./base/reset";
 @import "./base/typography";
+@import "./base/reset";
 
 //* components files
 @import "./components/buttons";
@@ -16,9 +23,3 @@
 @import "./pages/home";
 @import "./pages/faq";
 @import "./pages/presents";
-
-//* utils files
-@import "./utils/mixins";
-@import "./utils/helpers";
-@import "./utils/mediaqueries";
-@import "./utils/utilities";
