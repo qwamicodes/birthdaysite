@@ -102,3 +102,11 @@
 .u-flex-center {
   @include flexcenter;
 }
+
+.u-flex-left {
+  @include flexleft;
+}
+
+.u-flex-right {
+  @include flexright;
+}

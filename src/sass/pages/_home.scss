@@ -1,0 +1,24 @@
+// ? SVG styling
+.svg {
+  position: absolute;
+  z-index: -1;
+}
+
+.left-top-svg {
+  top: 0;
+  left: 0;
+}
+
+.left-bottom-svg {
+  top: 70%;
+  left: 10%;
+  animation: hue 10s linear infinite,
+    jump 5s ease-in-out 2s infinite backwards alternate;
+}
+
+.right-middle-svg {
+  right: 10%;
+  top: 40%;
+  animation: hue 1s linear infinite,
+    jump 5s ease-in-out 2s infinite backwards alternate;
+}

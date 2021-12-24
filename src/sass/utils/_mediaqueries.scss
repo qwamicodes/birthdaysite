@@ -6,8 +6,11 @@
   tab-port = 768px = 48em
   tab = 900px = 56.25em
   tab-land = 1024px = 64em
-  wide-desktop = 1336px = 83.5em
-  full-desktop = 12000 = 75em
+  wide-desktop = 1366px = 85.375em
+  full-desktop = 12000px = 75em
+  wider-desktop = 1440px = 90em
+  desktop = 1920px = 120em
+  4k = 2560px = 160rem
 */
 
 @mixin respond($breakpoint) {
@@ -47,10 +50,28 @@
     } //1024px
   }
 
+  @if $breakpoint == wide-desktop {
+    @media only screen and (max-width: 85.375em) {
+      @content;
+    } //1336px
+  }
+
   @if $breakpoint == full-desktop {
-    @media only screen and (min-width: 75em) {
+    @media only screen and (max-width: 75em) {
       @content;
     } //1200px
+  }
+
+  @if $breakpoint == wider-desktop {
+    @media only screen and (max-width: 90em) {
+      @content;
+    } //1440px
+  }
+
+  @if $breakpoint == desktop {
+    @media only screen and (min-width: 120em) {
+      @content;
+    } //1920px
   }
 
   @if $breakpoint == 4k {

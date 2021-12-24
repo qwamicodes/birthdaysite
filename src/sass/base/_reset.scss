@@ -18,14 +18,12 @@ body {
   background: linear-gradient(to bottom right, $primary-color, $alternate-color)
     no-repeat;
   background-size: cover;
-  max-height: 100vh;
-  height: 100vh;
   color: $color-white-dark;
-  animation: hue 10s linear infinite;
 }
 
 a {
   text-decoration: none;
+  transition: $transition-fastest;
 }
 
 ul,
@@ -44,4 +42,12 @@ input {
 
 button {
   border: 0;
+}
+
+#app {
+  position: relative;
+  width: 100vw;
+  max-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
 }

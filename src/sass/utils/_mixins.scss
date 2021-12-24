@@ -28,3 +28,15 @@
   @extend %dai;
   @extend %djb;
 }
+
+@mixin flexleft {
+  @extend %df;
+  @extend %dai;
+  @extend %djl;
+}
+
+@mixin flexright {
+  @extend %df;
+  @extend %dai;
+  @extend %djr;
+}
