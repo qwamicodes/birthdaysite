@@ -1,8 +1,15 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { appear } from "../helpers/Animation";
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <motion.div
+      variants={appear}
+      initial="hidden"
+      animate="show"
+      className="footer"
+    >
       Developed by: &ensp;
       <a
         href="https://www.linktr.ee/qwamicodes"
@@ -12,7 +19,7 @@ const Footer = () => {
       >
         @qwamicodes
       </a>
-    </div>
+    </motion.div>
   );
 };
 

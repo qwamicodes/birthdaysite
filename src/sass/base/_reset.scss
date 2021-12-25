@@ -32,6 +32,7 @@ body {
 a {
   text-decoration: none;
   transition: $transition-fastest;
+  cursor: pointer;
 }
 
 ul,
@@ -50,6 +51,7 @@ input {
 
 button {
   border: 0;
+  cursor: pointer;
 }
 
 #app {
@@ -60,4 +62,8 @@ button {
   overflow: hidden;
   display: grid;
   grid-template-rows: 8vh 84vh 8vh;
+}
+
+.hide {
+  overflow: hidden;
 }

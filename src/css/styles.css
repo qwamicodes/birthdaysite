@@ -220,7 +220,8 @@ body {
 
 a {
   text-decoration: none;
-  transition: all 0.5s ease-in-out; }
+  transition: all 0.5s ease-in-out;
+  cursor: pointer; }
 
 ul,
 li {
@@ -234,7 +235,8 @@ input:focus {
   outline: 0; }
 
 button {
-  border: 0; }
+  border: 0;
+  cursor: pointer; }
 
 #app {
   position: relative;
@@ -244,6 +246,27 @@ button {
   overflow: hidden;
   display: grid;
   grid-template-rows: 8vh 84vh 8vh; }
+
+.hide {
+  overflow: hidden; }
+
+.btn {
+  padding: 1rem 2rem; }
+  .btn a {
+    color: #fff; }
+  .btn-cta {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #99ddcc;
+    transition: all 0.75s ease-in-out;
+    font: 300 2rem "PTSans-Regular";
+    border-radius: 0.5rem;
+    text-transform: capitalize; }
+    @media only screen and (max-width: 64em) {
+      .btn-cta {
+        background-color: #99ddcc; } }
+    .btn-cta:hover {
+      background-color: #99ddcc; }
 
 .grid {
   display: grid; }

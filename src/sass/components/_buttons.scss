@@ -1,0 +1,26 @@
+.btn {
+  padding: 1rem 2rem;
+
+  a {
+    color: $color-white;
+  }
+
+  &-cta {
+    background-color: transparent;
+    color: $color-white;
+    border: 1px solid $accent-color;
+    transition: $transition-faster;
+
+    @include respond(tab-land) {
+      background-color: $accent-color;
+    }
+
+    &:hover {
+      background-color: $accent-color;
+    }
+
+    font: 300 2rem $ptsans-regular;
+    border-radius: 0.5rem;
+    text-transform: capitalize;
+  }
+}
