@@ -243,7 +243,7 @@ button {
   height: 100vh;
   overflow: hidden;
   display: grid;
-  grid-template-rows: 8% 1fr 8%; }
+  grid-template-rows: 8vh 84vh 8vh; }
 
 .grid {
   display: grid; }
