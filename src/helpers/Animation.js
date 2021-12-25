@@ -4,6 +4,7 @@ export const pageAnimation = {
     opacity: 1,
     y: 0,
     transition: {
+      delay: 0.5,
       duration: 0.5,
       when: "beforeChildren",
       staggerChildren: 0.5,
@@ -28,7 +29,7 @@ export const titleAnimation = {
   show: {
     y: 0,
     transition: {
-      duration: 1,
+      duration: 1.6,
     },
   },
 };
