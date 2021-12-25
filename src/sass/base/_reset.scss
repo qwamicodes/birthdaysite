@@ -8,8 +8,20 @@ html {
   font-size: 62.5%;
   box-sizing: inherit;
 
-  @include respond(mobile-small) {
-    font-size: 35%;
+  @include respond(wide-desktop) {
+    font-size: 60%;
+  }
+
+  // @include respond(tab-land) {
+  //   font-size: 58%;
+  // }
+
+  @include respond(tab) {
+    font-size: 58%;
+  }
+
+  @include respond(mobile) {
+    font-size: 50%;
   }
 }
 

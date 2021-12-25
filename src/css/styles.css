@@ -24,7 +24,7 @@
   tab = 900px = 56.25em
   tab-land = 1024px = 64em
   wide-desktop = 1366px = 85.375em
-  full-desktop = 12000px = 75em
+  full-desktop = 1200px = 75em
   wider-desktop = 1440px = 90em
   desktop = 1920px = 120em
   4k = 2560px = 160rem
@@ -202,9 +202,15 @@
 html {
   font-size: 62.5%;
   box-sizing: inherit; }
-  @media only screen and (max-width: 20em) {
+  @media only screen and (max-width: 85.375em) {
     html {
-      font-size: 35%; } }
+      font-size: 60%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 58%; } }
+  @media only screen and (max-width: 30em) {
+    html {
+      font-size: 50%; } }
 
 body {
   font: 300 1.8rem "Quicksand-Light";
@@ -390,3 +396,24 @@ button {
   text-align: center;
   line-height: 150%;
   margin: 0 auto; }
+  @media only screen and (max-width: 85.375em) {
+    .body {
+      width: 50%; } }
+  @media only screen and (max-width: 64em) {
+    .body {
+      width: 60%; } }
+  @media only screen and (max-width: 56.25em) {
+    .body {
+      width: 65%; } }
+  @media only screen and (max-width: 48em) {
+    .body {
+      width: 70%; } }
+  @media only screen and (max-width: 37.5em) {
+    .body {
+      width: 80%; } }
+  @media only screen and (max-width: 30em) {
+    .body {
+      width: 90%; } }
+  @media only screen and (max-width: 20em) {
+    .body {
+      width: 98%; } }
