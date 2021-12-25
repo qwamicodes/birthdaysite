@@ -17,7 +17,7 @@
 @font-face {
   font-family: "Telma-Bold";
   src: url("../fonts/telma/Telma-Bold.ttf") format("truetype");
-  font-weight: 300;
+  font-weight: 800;
   font-style: normal;
 }
 
@@ -57,3 +57,24 @@
 $primary-heading: 300 $fontsize-medium $quicksand-light;
 
 $navigation-heading: 500 4rem $ptsans-regular;
+
+.primary-heading {
+  font: 500 6rem $telma-regular;
+}
+
+.secondary-heading {
+  font: 400 5rem $ptsans-regular;
+}
+
+.accent-heading {
+  font: 300 2.5rem $quicksand-light;
+}
+
+.special-heading {
+  color: $accent-color;
+}
+
+.wavy-text {
+  text-decoration: underline;
+  text-decoration-style: wavy;
+}

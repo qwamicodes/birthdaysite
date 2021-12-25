@@ -22,3 +22,21 @@
   animation: hue 1s linear infinite,
     jump 5s ease-in-out 2s infinite backwards alternate;
 }
+
+.container {
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.header {
+  @include flexcenter;
+}
+
+.body {
+  width: 40%;
+  text-align: center;
+  line-height: 150%;
+  margin: 0 auto;
+}

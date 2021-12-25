@@ -1,10 +1,10 @@
-.u-flex-center, .u-flex-left, .u-flex-right, .nav-icon, .nav__background, .nav__links {
+.u-flex-center, .u-flex-left, .u-flex-right, .footer, .nav-icon, .nav__background, .nav__links, .header {
   display: flex; }
 
-.u-flex-center, .nav-icon, .nav__background, .nav__links {
+.u-flex-center, .footer, .nav-icon, .nav__background, .nav__links, .header {
   justify-content: center; }
 
-.u-flex-center, .u-flex-left, .u-flex-right, .nav-icon, .nav__background, .nav__links {
+.u-flex-center, .u-flex-left, .u-flex-right, .footer, .nav-icon, .nav__background, .nav__links, .header {
   align-items: center; }
 
 .nav__links {
@@ -151,7 +151,7 @@
 @font-face {
   font-family: "Telma-Bold";
   src: url("../fonts/telma/Telma-Bold.ttf") format("truetype");
-  font-weight: 300;
+  font-weight: 800;
   font-style: normal; }
 
 @font-face {
@@ -177,6 +177,22 @@
   src: url("../fonts/quicksand/Quicksand-Regular.ttf") format("truetype");
   font-weight: 500;
   font-style: normal; }
+
+.primary-heading {
+  font: 500 6rem "Telma-Regular"; }
+
+.secondary-heading {
+  font: 400 5rem "PTSans-Regular"; }
+
+.accent-heading {
+  font: 300 2.5rem "Quicksand-Light"; }
+
+.special-heading {
+  color: #99ddcc; }
+
+.wavy-text {
+  text-decoration: underline;
+  text-decoration-style: wavy; }
 
 * {
   margin: 0;
@@ -219,7 +235,40 @@ button {
   width: 100vw;
   max-height: 100vh;
   height: 100vh;
-  overflow: hidden; }
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 8rem 1fr 8rem; }
+
+.grid {
+  display: grid; }
+
+.col-1 {
+  grid-template-columns: 1fr; }
+
+.col-2 {
+  grid-template-columns: repeat(2, 1fr); }
+
+.col-3 {
+  grid-template-columns: repeat(3, 1fr); }
+
+.col-4 {
+  grid-template-columns: repeat(4, 1fr); }
+
+.row-1 {
+  grid-template-rows: 1fr; }
+
+.row-2 {
+  grid-template-rows: repeat(2, 1fr); }
+
+.row-3 {
+  grid-template-rows: repeat(3, 1fr); }
+
+.row-4 {
+  grid-template-rows: repeat(4, 1fr); }
+
+.footer__link {
+  font-family: "PTSans-Regular";
+  color: #fff; }
 
 .nav {
   height: 7rem; }
@@ -329,3 +378,15 @@ button {
   right: 10%;
   top: 40%;
   animation: hue 1s linear infinite, jump 5s ease-in-out 2s infinite backwards alternate; }
+
+.container {
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+  overflow: hidden; }
+
+.body {
+  width: 40%;
+  text-align: center;
+  line-height: 150%;
+  margin: 0 auto; }

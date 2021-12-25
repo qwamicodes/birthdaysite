@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Nav = ({ navCheck, setNavCheck }) => {
@@ -11,6 +11,10 @@ const Nav = ({ navCheck, setNavCheck }) => {
 
   //* Event listener to keep track of the window
   window.addEventListener("resize", updateWindowWidth);
+
+  useEffect(() => {
+    setViewportWidth(window.innerWidth);
+  }, []);
 
   return (
     <div

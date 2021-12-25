@@ -1,0 +1,8 @@
+.footer {
+  @include flexcenter;
+
+  &__link {
+    font-family: $ptsans-regular;
+    color: $color-white;
+  }
+}
