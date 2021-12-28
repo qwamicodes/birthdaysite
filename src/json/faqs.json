@@ -1,0 +1,24 @@
+{
+  "faqs": [
+    {
+      "no": 1,
+      "question": "How old are you?",
+      "answer": "Okay, for this question, your maths no good aaah! yawa! Please do the calculation, I was born in 2001."
+    },
+    {
+      "no": 2,
+      "question": "Where is my present?",
+      "answer": "Btw you're the one suppose to give me a present but since I can't give everyone a present, if you don't b"
+    },
+    {
+      "no": 3,
+      "question": "Where the party at?",
+      "answer": "Btw you're the one suppose to give me a present but since I can't give everyone a present, if you don't "
+    },
+    {
+      "no": 4,
+      "question": "Can I take you out?",
+      "answer": "Btw you're the one suppose to give me a present but since I can't give everyone a present, if you don't "
+    }
+  ]
+}

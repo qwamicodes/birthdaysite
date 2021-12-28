@@ -99,6 +99,10 @@
   position: sticky !important;
 }
 
+.u-text-center {
+  text-align: center;
+}
+
 .u-flex-center {
   @include flexcenter;
 }
