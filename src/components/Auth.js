@@ -1,6 +1,5 @@
 import React, { useRef, useState } from "react";
 import { signInUser } from "../auth/auth";
-import { auth } from "../config/firebase";
 
 const Auth = () => {
   const [isAuth, setIsAuth] = useState(false);
@@ -27,6 +26,8 @@ const Auth = () => {
         console.log(err.message);
       });
   };
+
+  console.log(user);
 
   return (
     <div>
