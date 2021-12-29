@@ -1,10 +1,10 @@
-.u-flex-center, .u-flex-left, .u-flex-right, .footer, .nav-icon, .nav__background, .nav__links, .header, .faq__questions, .presents__box, .presents__box--one {
+.u-flex-center, .u-flex-left, .u-flex-right, .footer, .nav-icon, .nav__background, .nav__links, .header, .faq__questions, .presents__box, .presents__box--one, .auth-container {
   display: flex; }
 
-.u-flex-center, .footer, .nav-icon, .nav__background, .nav__links, .header, .faq__questions, .presents__box, .presents__box--one {
+.u-flex-center, .footer, .nav-icon, .nav__background, .nav__links, .header, .faq__questions, .presents__box, .presents__box--one, .auth-container {
   justify-content: center; }
 
-.u-flex-center, .u-flex-left, .u-flex-right, .footer, .nav-icon, .nav__background, .nav__links, .header, .faq__questions, .presents__box, .presents__box--one {
+.u-flex-center, .u-flex-left, .u-flex-right, .footer, .nav-icon, .nav__background, .nav__links, .header, .faq__questions, .presents__box, .presents__box--one, .auth-container {
   align-items: center; }
 
 .nav__links, .faq__questions {
@@ -517,7 +517,10 @@ input[type="submit"] {
 
 .presents {
   display: grid;
-  grid-template-rows: 20% 90%; }
+  grid-template-rows: 20% 80%; }
+  @media only screen and (max-width: 30em) {
+    .presents {
+      grid-template-rows: 22vh 68vh; } }
   .presents__heading {
     width: 60%;
     margin: 0 auto;
@@ -533,6 +536,9 @@ input[type="submit"] {
     grid-gap: 1rem;
     margin: 0 auto;
     height: 80%; }
+    @media only screen and (max-width: 64em) {
+      .presents__grid {
+        width: 90%; } }
   .presents__box {
     border: 0.5px solid #fff;
     width: 90%;
@@ -565,3 +571,6 @@ input[type="submit"] {
   @media only screen and (max-width: 64em) {
     .auth-area {
       width: 90%; } }
+
+.auth-container {
+  height: 100%; }

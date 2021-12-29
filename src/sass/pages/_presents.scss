@@ -1,6 +1,10 @@
 .presents {
   display: grid;
-  grid-template-rows: 20% 90%;
+  grid-template-rows: 20% 80%;
+
+  @include respond(mobile) {
+    grid-template-rows: 22vh 68vh;
+  }
 
   &__heading {
     width: 60%;
@@ -20,6 +24,10 @@
     grid-gap: 1rem;
     margin: 0 auto;
     height: 80%;
+
+    @include respond(tab-land) {
+      width: 90%;
+    }
   }
 
   &__box {
@@ -65,4 +73,9 @@
   @include respond(tab-land) {
     width: 90%;
   }
+}
+
+.auth-container {
+  height: 100%;
+  @include flexcenter;
 }

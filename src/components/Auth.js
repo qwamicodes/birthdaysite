@@ -53,7 +53,7 @@ const Auth = () => {
   }, []);
 
   return (
-    <div>
+    <div className="auth-container">
       {isAuth ? (
         user && user.user.displayName ? (
           <PresentBox prize={user.user.displayName} />
