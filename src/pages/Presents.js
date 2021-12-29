@@ -16,8 +16,10 @@ const Presents = () => {
         So in this section, everyone will have to log in. I asked for emails of
         everyone (maybe not everyone, if I didn't ask for your email please let
         me know so i add your email), <br />
-        The password is
-        <span className="special-heading wavy-text"> kwame29</span>
+        After that there are twenty boxes (20) so you've the chance to choose on
+        box from the lot. You screenshot whatever you get and send it to me to
+        redeem you present. <br /> The password is
+        <strong className="special-heading wavy-text"> kwame29</strong>
       </div>
       <Auth />
     </motion.div>

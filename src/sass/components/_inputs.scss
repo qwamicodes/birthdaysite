@@ -9,6 +9,10 @@
   margin: 0 auto;
   transition: $transition-faster;
 
+  @include respond(tab-land) {
+    width: 96%;
+  }
+
   &:focus:invalid {
     border-color: $danger-color;
   }

@@ -1,9 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { signInUser } from "../auth/auth";
+import { auth } from "../config/firebase";
+import PresentBoxes from "./PresentBoxes";
 
 const Auth = () => {
   const [isAuth, setIsAuth] = useState(false);
-  const [user, setUser] = useState();
+  // const [user, setUser] = useState();
 
   const emailRef = useRef();
   const passRef = useRef();
@@ -15,11 +17,15 @@ const Auth = () => {
 
     signInUser(email, pass)
       .then((user) => {
-        setIsAuth(isAuth);
+        setIsAuth(!isAuth);
 
-        const realUser = user.user;
+        const realUser = {
+          user: user.user.providerData[0],
+          userId: user.user.uid,
+        };
 
-        setUser(realUser);
+        // setUser(realUser);
+        console.log(realUser);
       })
       .catch((err) => {
         console.log(err.code);
@@ -27,12 +33,18 @@ const Auth = () => {
       });
   };
 
-  console.log(user);
+  useEffect(() => {
+    auth.onAuthStateChanged((user) => {
+      if (user === null) {
+        return null;
+      }
+    });
+  }, []);
 
   return (
     <div>
       {isAuth ? (
-        <form>authenticated</form>
+        <PresentBoxes isAuth={isAuth} />
       ) : (
         <form className="auth-area" onSubmit={handleSubmitForm}>
           <input
