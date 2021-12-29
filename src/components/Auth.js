@@ -1,11 +1,13 @@
 import React, { useRef, useState, useEffect } from "react";
 import { signInUser } from "../auth/auth";
 import { auth } from "../config/firebase";
+import PresentBox from "./PresentBox";
 import PresentBoxes from "./PresentBoxes";
 
 const Auth = () => {
   const [isAuth, setIsAuth] = useState(false);
-  // const [user, setUser] = useState();
+  const [user, setUser] = useState();
+  const [error, setError] = useState();
 
   const emailRef = useRef();
   const passRef = useRef();
@@ -24,11 +26,20 @@ const Auth = () => {
           userId: user.user.uid,
         };
 
-        // setUser(realUser);
+        // if (user.user.displayName) {
+        //   auth.signOut();
+        //   setIsAuth(false);
+        // }
+
+        setUser(realUser);
         console.log(realUser);
       })
       .catch((err) => {
-        console.log(err.code);
+        setError(err.code);
+
+        setTimeout(() => {
+          setError(undefined);
+        }, 5000);
         console.log(err.message);
       });
   };
@@ -44,9 +55,16 @@ const Auth = () => {
   return (
     <div>
       {isAuth ? (
-        <PresentBoxes isAuth={isAuth} />
+        user && user.user.displayName ? (
+          <PresentBox prize={user.user.displayName} />
+        ) : (
+          <PresentBoxes isAuth={isAuth} />
+        )
       ) : (
         <form className="auth-area" onSubmit={handleSubmitForm}>
+          {error && (
+            <span className="u-margin-auto u-flex-center">{error}</span>
+          )}
           <input
             type="email"
             name="email"

@@ -551,7 +551,9 @@ input[type="submit"] {
     .presents__box--one {
       width: 50%;
       height: 50%;
-      margin: auto; }
+      margin: auto;
+      font: 600 3rem "PTSans-Regular";
+      text-transform: capitalize; }
 
 .auth-area {
   display: flex;

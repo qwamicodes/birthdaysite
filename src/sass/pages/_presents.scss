@@ -48,6 +48,8 @@
       height: 50%;
       margin: auto;
       @include flexcenter;
+      font: 600 3rem $ptsans-regular;
+      text-transform: capitalize;
     }
   }
 }
