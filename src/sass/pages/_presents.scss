@@ -1,0 +1,19 @@
+.presents {
+  display: grid;
+  grid-template-rows: 20% 90%;
+
+  &__heading {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.auth-area {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  width: 60%;
+  height: 100%;
+  margin: 0 auto;
+}
