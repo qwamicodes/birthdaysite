@@ -18,7 +18,7 @@
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     width: 80%;
     grid-gap: 1rem;
@@ -31,9 +31,10 @@
   }
 
   &__box {
+    margin: auto;
     border: 0.5px solid $color-white;
-    width: 90%;
-    height: 90%;
+    width: 10rem;
+    height: 10rem;
     @include flexcenter;
     font: 600 2.2rem $ptsans-regular;
     cursor: pointer;
@@ -46,9 +47,10 @@
     }
 
     &--covered {
-      background: url("../assets/images/favicon-32x32.png") no-repeat;
+      background: url("../assets/images/profile.jpg") no-repeat;
       background-position: center;
       color: transparent;
+      background-size: cover;
     }
 
     &--one {

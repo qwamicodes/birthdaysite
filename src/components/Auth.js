@@ -1,11 +1,12 @@
 import React, { useRef, useState, useEffect } from "react";
 import { signInUser } from "../auth/auth";
 import { auth } from "../config/firebase";
+
 import PresentBox from "./PresentBox";
 import PresentBoxes from "./PresentBoxes";
 
 const Auth = () => {
-  const [isAuth, setIsAuth] = useState(false);
+  const [isAuth, setIsAuth] = useState(true);
   const [user, setUser] = useState();
   const [error, setError] = useState();
 
@@ -18,21 +19,20 @@ const Auth = () => {
     const pass = passRef.current.value;
 
     signInUser(email, pass)
-      .then((user) => {
+      .then(({ user }) => {
         setIsAuth(!isAuth);
 
         const realUser = {
-          user: user.user.providerData[0],
-          userId: user.user.uid,
+          user: user.providerData[0],
+          userId: user.uid,
         };
 
-        // if (user.user.displayName) {
-        //   auth.signOut();
-        //   setIsAuth(false);
-        // }
+        if (user.displayName) {
+          auth.signOut();
+          return setIsAuth(false);
+        }
 
         setUser(realUser);
-        console.log(realUser);
       })
       .catch((err) => {
         setError(err.code);
@@ -40,23 +40,20 @@ const Auth = () => {
         setTimeout(() => {
           setError(undefined);
         }, 5000);
-        console.log(err.message);
       });
   };
 
   useEffect(() => {
     auth.onAuthStateChanged((user) => {
-      if (user === null) {
-        return null;
-      }
+      if (user === null) return null;
     });
   }, []);
 
   return (
     <div className="auth-container">
       {isAuth ? (
-        user && user.user.displayName ? (
-          <PresentBox prize={user.user.displayName} />
+        user?.displayName ? (
+          <PresentBox prize={user.displayName} />
         ) : (
           <PresentBoxes isAuth={isAuth} />
         )

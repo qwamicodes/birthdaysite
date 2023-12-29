@@ -14,6 +14,7 @@ const PresentBox = ({ prize }) => {
 
     console.log(auth.currentUser);
   }, [prize]);
+  
   return <div className="presents__box--one">{prize}</div>;
 };
 

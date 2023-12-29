@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const Boxes = ({
   prize,
@@ -9,13 +9,16 @@ const Boxes = ({
   click,
   setBoxPrize,
 }) => {
-  setBoxPrize(prize);
+  useEffect(() => {
+    setBoxPrize(prize);
+  }, []);
+
   return (
     <div
-      onClick={click}
       className={
         isCovered ? "presents__box presents__box--covered" : "presents__box "
       }
+      onClick={click}
     >
       {isCovered ? null : prize}
     </div>

@@ -4,16 +4,14 @@ import Boxes from "./Boxes";
 import PresentBox from "./PresentBox";
 
 const PresentBoxes = ({ isAuth }) => {
-  const [presentsData, setPresentsData] = useState();
+  const [presentsData, setPresentsData] = useState([]);
   const [isCovered, setIsCovered] = useState(true);
   const [count, setCount] = useState(0);
   const [selPrize, setSelPrize] = useState();
   const [boxPrize, setBoxPrize] = useState();
 
   const handleBoxSel = (present) => {
-    if (count > 1) {
-      return;
-    }
+    if (count > 1) return;
 
     setIsCovered(!isCovered);
     setCount((old) => old + 1);
@@ -21,9 +19,7 @@ const PresentBoxes = ({ isAuth }) => {
   };
 
   useEffect(() => {
-    if (!isAuth) {
-      return;
-    }
+    if (!isAuth) return;
 
     const shuffledArray = presents.presents.sort((a, b) => 0.5 - Math.random());
 
@@ -39,7 +35,6 @@ const PresentBoxes = ({ isAuth }) => {
       {selPrize ? (
         <PresentBox prize={boxPrize} />
       ) : (
-        presentsData &&
         presentsData.map((present, index) => (
           <Boxes
             click={() => handleBoxSel(present)}

@@ -530,7 +530,7 @@ input[type="submit"] {
         width: 90%; } }
   .presents__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(5, 1fr);
     width: 80%;
     grid-gap: 1rem;
@@ -540,9 +540,10 @@ input[type="submit"] {
       .presents__grid {
         width: 90%; } }
   .presents__box {
+    margin: auto;
     border: 0.5px solid #fff;
-    width: 90%;
-    height: 90%;
+    width: 10rem;
+    height: 10rem;
     font: 600 2.2rem "PTSans-Regular";
     cursor: pointer;
     border-radius: 2rem;
@@ -551,9 +552,10 @@ input[type="submit"] {
       width: 100%;
       height: 100%; }
     .presents__box--covered {
-      background: url("../assets/images/favicon-32x32.png") no-repeat;
+      background: url("../assets/images/profile.jpg") no-repeat;
       background-position: center;
-      color: transparent; }
+      color: transparent;
+      background-size: cover; }
     .presents__box--one {
       width: 50%;
       height: 50%;
