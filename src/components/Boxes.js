@@ -1,17 +1,9 @@
 import React, { useEffect } from "react";
 
-const Boxes = ({
-  prize,
-  isCovered,
-  setIsCovered,
-  count,
-  setCount,
-  click,
-  setBoxPrize,
-}) => {
+const Boxes = ({ prize, isCovered, click, setBoxPrize }) => {
   useEffect(() => {
     setBoxPrize(prize);
-  }, []);
+  }, [setBoxPrize, prize]);
 
   return (
     <div
