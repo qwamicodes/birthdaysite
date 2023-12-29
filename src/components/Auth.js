@@ -6,7 +6,7 @@ import PresentBox from "./PresentBox";
 import PresentBoxes from "./PresentBoxes";
 
 const Auth = () => {
-  const [isAuth, setIsAuth] = useState(true);
+  const [isAuth, setIsAuth] = useState(false);
   const [user, setUser] = useState();
   const [error, setError] = useState();
 
